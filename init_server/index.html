@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Init Server Code</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Draco is free PSD &amp; HTML template by @afnizarnur">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kube.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/custom.min.css" />
+    <link rel="shortcut icon" href="img/favicon.png" />
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<style>
+		.intro h1:before {
+			/* Edit this with your name or anything else */
+			content: 'DRACO';
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation -->
+
+	<!-- Introduction -->
+	<div class="intro section" id="about">
+		<div class="container">
+			<h2>Init Server</h2>
+		</div>
+	</div>
+
+	<!-- Work Experience -->
+
+		<div class="container">
+			<ul class="work-list">
+                <font size="+1"><b>how to make a new server work for AI practitioners instantly:</b></font><br>
+                <br>
+                <p style="color:red;">here assume that your server is ubuntu 20.04:</p>
+                <b>1. download nvidia driver</b><br>
+                &emsp;sudo apt install nvidia-driver-515  nvidia-dkms-515 <br>
+                <br>
+                &emsp;if you did sonething wrong with the above step:<br>
+                    &emsp;1.1. remove incorrect nvidia drivers<br>
+                    &emsp;&emsp;sudo apt-get purge nvidia-*<br>
+                    &emsp;&emsp;sudo apt-get update<br>
+                    &emsp;&emsp;sudo apt-get autoremove<br>
+                    &emsp;1.2 search latest nvidia driver<br>
+                    &emsp;&emsp;apt search nvidia-driver<br>
+                    <br>
+                <b>2. reboot system</b><br>
+                &emsp;sudo reboot<br>
+                <br>
+                <b>3. download python (or with anaconda)</b><br>
+                &emsp;sudo apt-get update<br>
+                &emsp;sudo apt-get install python3<br>
+                <br>
+                <b>4. download vscode extensions like pylance</b><br>
+                <br>
+                <b>5. download pip</b><br>
+                &emsp;sudo add-apt-repository universe<br>
+                &emsp;sudo apt-get update<br>
+                &emsp;sudo apt install python3-pip<br>
+                <br>
+                <b>6. download requirements</b><br>
+                &emsp;pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116<br>
+                &emsp;pip install numpy pandas transformers beautifulsoup4 flask jieba matplotlib scipy sentencepiece sklearn tqdm<br>
+                <br>
+                <b>7. download cuda toolkit</b><br>
+                &emsp;wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb # attention on the ubuntu version!<br>
+                &emsp;sudo dpkg -i cuda-keyring_1.0-1_all.deb<br>
+                &emsp;sudo apt-get update<br>
+                &emsp;sudo apt-get -y install cuda<br>
+                <br>
+                <p style="color:blue;">Congrats that you have finished!	</p>			
+			</ul>
+		</div>
+
+	<!-- Award & Achievements -->
+
+	<!-- Javascript -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/typed.min.js"></script>
+    <script src="js/kube.min.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+		function newTyped(){}$(function(){$("#typed").typed({
+		// Change to edit type effect
+		strings: ["far northern sky", "your galaxy", "everywhere"],
+
+		typeSpeed:90,backDelay:700,contentType:"html",loop:!0,resetCallback:function(){newTyped()}}),$(".reset").click(function(){$("#typed").typed("reset")})});
+    </script>
+</body>
+</html>

@@ -120,55 +120,98 @@
 
 
         <heading>Research Experiences</heading>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>  
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
           <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Learning to Generate Natural-Language Document Identifiers for Document Retrieval</papertitle>
-
-                <br>
-              <i>Collaborating with Yujia Zhou, Yiteng Tu and Prof. Zhicheng Dou. </i>
-                <br>
-                <li>Pursuing for a system that can generate natural-language identifiers for documents to improve current
-                   heuristic / implicit identifiers for model-based Information Retrieval (IR).
-                </li>
-
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <img src='images/NOVO.png' width="160">
+              </div>
             </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>NOVO: Learnable and Interpretable Document Identifiers for Model-Based IR</papertitle>
+              <br>
+              <strong>Zihan Wang</strong>,
+              <a href="https://www.zhouyujia.cn/">Yujia Zhou</a>,
+              Yiteng Tu, 
+              <a href="https://playbigdata.ruc.edu.cn">Zhicheng Dou</a>.
+              <br>
+              <em>Work in Progress.</em>
+              <br>
+							<!-- <a href="">[paper]</a>
+              <a href="">[code]</a> -->
+              <li>
+                Propose a Neural Optimized VOcabularial (NOVO) doc-id, a non-overlapping n-gram set from the document.
+              </li>
+              <li>
+                Propose to optimize NOVO doc-ids through query denoising modeling and retrieval tasks, allowing for optimizing semantic and token representations.
+              </li>
+      
+              </td>
+          </tr>
+
+          
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <img src='images/retallm.png' width="160">
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>RetaLLM: A Retrieval-Augmented Large Language Model Toolkit</papertitle>
+              <br>
+              <a href="https://github.com/rucliujn">Jiongnan Liu</a>,
+              <a href="https://github.com/ignorejjj">Jiajie Jin</a>,
+              <strong>Zihan Wang</strong>, 
+              <a href="https://paperswithcode.com/search?q=author%3AJiehan+Cheng">Jiehan Cheng</a>,
+              <a href="https://playbigdata.ruc.edu.cn">Zhicheng Dou</a>,
+              <a href="https://scholar.google.com/citations?hl=en&user=tbxCHJgAAAAJ"Ji-Rong Wen</a>
+              <br>
+              <em>Arxiv Preprint</em>
+              <br>
+							<a href="https://arxiv.org/pdf/2306.05212.pdf">[paper]</a>
+              <a href="https://github.com/ruc-gsai/yulan-ir">[code]</a>
+              <li>
+                Develop a RETreival-Augmented LLM toolkit. 
+              </li>
+              <li>
+                provide more plug-and-play modules to support better interaction between IR systems and LLMs,
+                including request rewriting, document retrieval, passage extraction, answer generation, and fact checking modules.
+              </li>
+      
+              </td>
           </tr>
 
           <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Learning to Generate Factually Correct Articles for Queries by Grounding on Large Web Corpus</papertitle>
-
-                <br>
-              <i>Collaborating with Hongjin Qian and Prof. Zhicheng Dou. </i>
-                <br>
-                <li>Pursuing for a trustworthy generative language model that utilizes 
-                  web-retrieved data to generate factually correct articles, e.g., wikipedia style articles.</li>
-
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <img src='images/CQA.png' width="160">
+              </div>
             </td>
-          </tr>
-
-
-          <tr>
             <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Learning on Structured Documents for Conditional Question Answering</papertitle>
-
-                <br>
-              <i>Collaborated with Hongjin Qian and Prof. Zhicheng Dou. </i>
-                <br>
-                <li>Proposed a data augmentation method on structured web pages for conditional QA,
-                  including a question generation module for structured documents,
-                  and a contrastive learning module to learn weak-supervision in document structure.
-                </li>
-                <li>Designed an end-to-end pipeline for conditional QA that can predict multiple hybrid-type
-                  answers and conditions to a question with an extractive model.
-                </li>
-
-            </td>
+              <papertitle>Learning on Structured Documents for Conditional Question Answering</papertitle>
+              <br>
+              <strong>Zihan Wang</strong>, 
+              <a href="https://qhjqhj00.github.io/">Hongjin Qian</a>, 
+              <a href="https://playbigdata.ruc.edu.cn">Zhicheng Dou</a>
+              <br>
+              <em>CCL 2023</em>
+              <br>
+							<a href="/pdf/CQA.pdf">[paper]</a>
+              <li>
+                Propose a self-supervised learning method on structured documents for conditional question answering, 
+                involving a conditional question generation method and a contrastive learning objective.
+              </li>
+              <li>
+                Propose a pipeline that enables the generation multiple conditional questions for an extractive language model. 
+              </li>
+      
+              </td>
           </tr>
-
 
         </tbody></table>
+
 
 
 

@@ -19,6 +19,35 @@
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/seal_icon.png">
+	
+	<style>
+	  /* Style for the floating window */
+	  #floatWindow {
+	      display: none; /* Hidden by default */
+	      position: absolute;
+	      background-color: #f9f9f9;
+	      border: 1px solid #ccc;
+	      padding: 15px;
+	      width: 300px;
+	      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	      z-index: 100;
+	      top: 100px;
+	      left: 100px;
+	  }
+	
+	  /* Close button style */
+	  #closeBtn {
+	      display: inline-block;
+	      float: right;
+	      cursor: pointer;
+	      color: #aaa;
+	  }
+	
+	  #closeBtn:hover {
+	      color: #000;
+	  }
+	</style>
+
 </head>
 
 <body>
@@ -140,8 +169,15 @@
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <p>
-                  I work on a wide range topic regarding Large Language Models.
-                  I have done several works regarding (1) general interaction, e.g., <a href="https://xingyaoww.github.io/mint-bench/">MINT interaction benchmark</a>, (2) the cross application of language models and information retrieval (IR) systems, e.g., <a href="https://arxiv.org/pdf/2306.05212.pdf">retrieval augmented models (RetaLLM)</a> and <a href="pdf/novo.pdf">LM-based IR</a>, (4) efficient alignment of LLMs, e.g., <a href="https://arxiv.org/abs/2407.01906">expert-specialized fine-tuning</a>.                
+                  I work on various topics regarding Large Language Models, including <b> interaction, alignment, and long-context understanding (retrieval, IR).</b>
+                  Mt representative works include 
+		      (1) general interaction, e.g., 
+		      	<a href="https://xingyaoww.github.io/mint-bench/">MINT interaction benchmark</a>, 
+		      (2) the cross-application of LLM & IR, e.g., 
+		      	<a href="https://arxiv.org/pdf/2306.05212.pdf">retrieval augmented models (RetaLLM)</a> 
+		      	and <a href="pdf/novo.pdf">LM-based IR</a>, 
+		      (3) efficient alignment of LLMs, e.g., 
+		      	<a href="https://arxiv.org/abs/2407.01906">expert-specialized fine-tuning</a>.                
               </p>
             </td>
           </tr>
@@ -153,10 +189,22 @@
 
 
 
-
 	<heading>Selected Publications</heading>
-	<p>See full list on <a href="https://www.semanticscholar.org/author/Zihan-Wang/2243360876" target="_blank">Semantic Scholar</a></p>
-        
+	<p>See full list on <a href="https://www.semanticscholar.org/author/Zihan-Wang/2243360876" target="_blank">Semantic Scholar</a> (<a href="#" id="openFloat">Why I Love Semantic Scholar, and You Might Too</a>)</p> 
+	<!-- The floating window -->
+	<div id="floatWindow">
+	    <span id="closeBtn">&times;</span>
+	    <p>
+        Semantic Scholar uses AI to summarize papers, highlight key phrases, and rank research by influence rather than citations.
+        This helps you find important studies faster. It has a clean design and lets you filter by field. 
+        Plus, it prioritizes free PDFs to avoid paywalls. 
+        You can also see how papers connect with citation graphs. 
+        While Google Scholar is great for broad searches, 
+        Semantic Scholar is smarter for finding high-quality and impactful research!
+	    </p>
+	</div>
+	      
+
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tbody>
 
@@ -174,11 +222,11 @@
                 <a href="https://scholar.google.com.hk/citations?user=8b-ysf0NWVoC&hl=zh-CN">Damai Dai</a>,
                 <a href="https://runxinxu.github.io/aboutme/">Runxin Xu</a>,
                 <a href="http://www.idi.zju.edu.cn/member/3053.html">Zhuoshu Li</a>,
-                Y. Wu
+                <a href="https://scholar.google.com/citations?user=aQizmzsAAAAJ&hl=zh-CN"> Yu Wu </a>
                 <br>
                 <em>EMNLP 2024</em>
                 <br>
-                <a href="pdf/esft.pdf">[paper]</a>
+                <a href="https://arxiv.org/abs/2407.01906">[paper]</a>
                 <a href="https://github.com/deepseek-ai/ESFT">[code]</a>
                 <p>
                   We propose Expert-Specialized Fine-Tuning (ESFT) to customize Large Language Models (LLMs) with Mixture-of-Experts (MoE) architecture by adjusting only task-relevant parts, improving efficiency and performance while using fewer resources and storage. We found that different experts in MoE models specialize in specific tasks, making training these task-relevant experts more cost-effective than training shared parameters.
@@ -408,6 +456,40 @@
     </tr>
   </tbody></table>
 
+  <script>
+    // Get the elements
+    const floatWindow = document.getElementById('floatWindow');
+    const openFloat = document.getElementById('openFloat');
+    const closeBtn = document.getElementById('closeBtn');
+  
+    // Open the float window when the link is clicked
+    openFloat.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default action of the link
+  
+        // Get the position of the link element
+        const rect = openFloat.getBoundingClientRect();
+  
+        // Position the floating window near the link
+        floatWindow.style.top = rect.top + window.scrollY + 30 + 'px'; // 30px below the link
+        floatWindow.style.left = rect.left + window.scrollX + 'px'; // Align it with the link horizontally
+  
+        // Display the floating window
+        floatWindow.style.display = 'block';
+    });
+  
+    // Close the float window when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        floatWindow.style.display = 'none';
+    });
+  
+    // Close the float window when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target !== floatWindow && event.target !== openFloat && !floatWindow.contains(event.target)) {
+            floatWindow.style.display = 'none';
+        }
+    });
+  </script>
+  
 
   
 </body>

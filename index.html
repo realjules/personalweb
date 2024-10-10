@@ -215,7 +215,7 @@
 		<a href="https://github.com/deepseek-ai/ESFT" style="vertical-align: middle;">[code]</a>
 		<img alt="" src="https://img.shields.io/github/stars/deepseek-ai/ESFT?style=social" style="vertical-align: middle;">
                 <p>
-                  We propose Expert-Specialized Fine-Tuning (ESFT) to customize Large Language Models (LLMs) with Mixture-of-Experts (MoE) architecture by adjusting only task-relevant parts, improving efficiency and performance while using fewer resources and storage. We found that different experts in MoE models specialize in specific tasks, making training these task-relevant experts more cost-effective than training shared parameters.
+                  We harness the <b> Specialized Power of Experts </b> in MoE LLMs through ESFT. By fine-tuning <b> Down to 5% Experts </b> in a layer, near-full performance can be achieved. 
                 </p>
                 <br>
                 </td>
@@ -246,10 +246,8 @@
 		<a href="https://github.com/xingyaoww/mint-bench" style="vertical-align: middle;">[code]</a>
 		<img alt="" src="https://img.shields.io/github/stars/xingyaoww/mint-bench?style=social" style="vertical-align: middle;">
               <p>
-                Current LLM evaluations focus on single-turn and overlook multi-turn real-world scenarios. 
-                We introduce the MINT benchmark to assess LLMs in interaction with tools and language feedback. 
-                Our study of 20 LLMs shows they benefit from multi-turn interactions, but current RLHF and SIFT methods might hinder this.
-                MINT aims to encourage research on LLM multi-turn capabilities, especially in open-source models.
+		We introduce <b>MINT</b>, a benchmark for evaluating LLMs in <b>Multi-turn Interactions</b> with tools and language feedback. 
+                Our study shows that multi-turn dynamics boost LLM performance, revealing limitations in existing RLHF and SIFT methods.
               </p>
               <br>
               </td>
@@ -270,10 +268,9 @@
 		<a href="https://github.com/deepseek-ai/DeepSeek-V2?tab=readme-ov-file" style="vertical-align: middle;">[code]</a>
 		<img alt="" src="https://img.shields.io/github/stars/deepseek-ai/DeepSeek-V2?style=social" style="vertical-align: middle;">
                 <p>
-		We introduce DeepSeek-V2, a strong Mixture-of-Experts (MoE) language model characterized by economical training and
-		efficient inference. It comprises 236B total parameters, of which 21B are activated for each token. Compared with
-		DeepSeek 67B, DeepSeek-V2 achieves stronger performance, and meanwhile saves 42.5% of training costs, reduces the KV
-		cache by 93.3%, and boosts the maximum generation throughput to 5.76 times.
+		We introduce DeepSeek-V2, a strong MoE model with economical training and efficient inference.
+		Compared to DeepSeek 67B, DeepSeek-V2 with 23B activated parameters achieves stronger 
+		performance, saves 42.5% training costs, and boosts generation speed up to 5.76x.
                 </p>
                 <br>
                 </td>
@@ -299,10 +296,9 @@
 		<a href="https://github.com/ZihanWang314/NOVO" style="vertical-align: middle;">[code]</a>
 		<img alt="" src="https://img.shields.io/github/stars/zihanwang314/NOVO?style=social" style="vertical-align: middle;">
               <p> 
-                We propose Neural Optimized Vocabularial doc-ids for model-based information retrieval. 
+                We propose learnable novo doc-ids for model-based information retrieval. 
                 NOVO doc-ids consist of non-overlapping n-gram sets to identify documents,
                 optimized through query denoising modeling and retrieval tasks.
-                We further demonstrate how N-grams lead to interpretability in understanding documents and queries. 
               </p>
               <br>
               </td>
@@ -331,8 +327,8 @@
 		
               <p> 
                 We develop a RETreival-Augmented LLM toolkit. 
-                It provides more plug-and-play modules to support better interaction between IR systems and LLMs,
-                including request rewriting, document retrieval, passage extraction, answer generation, and fact checking modules.      
+                It supports better interaction between retrieval systems and LLMs,
+                featuring request rewriting, passage extraction, and fact-checking modules.      
               </p>
               </td>
           </tr>
@@ -354,9 +350,9 @@
               <br>
 			<a href="pdf/lsd.pdf">[paper]</a><a href="data/ccl-2023-poster.pdf">[poster]</a>
               <p>
-                We propose a self-supervised learning method on structured documents for conditional question answering,
-                consisting of a conditional question generation approach and a contrastive learning objective.
-                We propose a pipeline able to generate multiple answers with detailed conditions.       
+                We propose self-supervised learning on structured documents for conditional QA.
+                It consists of a conditional question generation approach and a contrastive learning objective.
+                We propose a two-stage pipeline to generate conditional answers. 
               </p>
               </td>
           </tr> -->
@@ -371,7 +367,7 @@
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
 	    	<ul>
-			  <li><b>Program Committee (Reviewer) - </b> <a href="https://2024.emnlp.org/calls/demos/">EMNLP 2024 System & Demo Track</a></li>
+			  <li><b>Program Committee (Reviewer) - </b> <a href="https://2024.emnlp.org/calls/demos/">EMNLP 2024</a></li>
 			  <li><b>Session Organization - </b> Session of Language Models & Agents in <a href="https://china-r.cosx.org/bj2023/lectures.html">Chinese R Conference 2023</a></li>
 			  <li><b>Academic Advisor - </b> <a href="http://ai.ruc.edu.cn/newslist/notice/20230411001.html">National University Student Innovation Program (2023, No. 3)</a></li>                  
                 </ul>

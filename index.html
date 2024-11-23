@@ -46,7 +46,58 @@
 	  #closeBtn:hover {
 	      color: #000;
 	  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td, th {
+    padding: 8px;
+  }
 	</style>
+
+<style>
+  /* 当屏幕宽度小于1200px时，调整字体大小 */
+  @media (max-width: 1200px) {
+    #responsiveTable td,
+    #responsiveTable td * {
+      font-size: 14px;
+    }
+      /* 调整图片大小 */
+    #resizeImg {
+      height: 1.2em; /* 图片高度等于字体大小 */
+      width: auto; /* 按比例调整宽度 */
+      vertical-align: middle; /* 保持图片与文字对齐 */
+    }
+  }
+
+  /* 当屏幕宽度小于800px时，进一步调整字体大小 */
+  @media (max-width: 800px) {
+    #responsiveTable td,
+    #responsiveTable td * {
+      font-size: 12px;
+    }
+    #resizeImg {
+      height: 1.2em; /* 图片高度等于字体大小 */
+      width: auto; /* 按比例调整宽度 */
+      vertical-align: middle; /* 保持图片与文字对齐 */
+    }
+  }
+
+  /* 当屏幕宽度小于500px时，字体更小 */
+  @media (max-width: 500px) {
+    #responsiveTable td,
+    #responsiveTable td * {
+      font-size: 10px;
+    }
+    #resizeImg {
+      height: 1.2em; /* 图片高度等于字体大小 */
+      width: auto; /* 按比例调整宽度 */
+      vertical-align: middle; /* 保持图片与文字对齐 */
+    }
+  }
+</style>
+
 
 </head>
 
@@ -191,7 +242,7 @@
 	</div>
 	      
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" id="responsiveTable">
           <tbody>
 
             <tr>
@@ -214,7 +265,7 @@
                 <br>
 		<a href="https://arxiv.org/abs/2407.01906" style="vertical-align: middle;">[paper]</a>
 		<a href="https://github.com/deepseek-ai/ESFT" style="vertical-align: middle;">[code]</a>
-		<img alt="" src="https://img.shields.io/github/stars/deepseek-ai/ESFT?style=social" style="vertical-align: middle;">
+		<img id="resizeImg" alt="" src="https://img.shields.io/github/stars/deepseek-ai/ESFT?style=social" style="vertical-align: middle;">
                 <p>
                   We harness the <b> Specialized Power of Experts </b> in MoE LLMs through ESFT. By fine-tuning <b> Down to 5% Experts </b> in a layer, near-full performance can be achieved. 
                 </p>
@@ -245,7 +296,7 @@
 		<a href="https://arxiv.org/abs/2309.10691" style="vertical-align: middle;">[paper]</a>
 		<a href="https://xingyaoww.github.io/mint-bench" style="vertical-align: middle;">[website]</a>
 		<a href="https://github.com/xingyaoww/mint-bench" style="vertical-align: middle;">[code]</a>
-		<img alt="" src="https://img.shields.io/github/stars/xingyaoww/mint-bench?style=social" style="vertical-align: middle;">
+		<img id="resizeImg" alt="" src="https://img.shields.io/github/stars/xingyaoww/mint-bench?style=social" style="vertical-align: middle;">
               <p>
 		We introduce <b>MINT</b>, a benchmark for evaluating LLMs in <b>Multi-turn Interactions</b> with tools and language feedback. 
                 MINT reveals several limitations in existing RLHF and SIFT methods on multi-turn interaction.
@@ -267,7 +318,7 @@
                 <br>
 		<a href="https://arxiv.org/abs/2405.04434" style="vertical-align: middle;">[paper]</a>
 		<a href="https://github.com/deepseek-ai/DeepSeek-V2?tab=readme-ov-file" style="vertical-align: middle;">[code]</a>
-		<img alt="" src="https://img.shields.io/github/stars/deepseek-ai/DeepSeek-V2?style=social" style="vertical-align: middle;">
+		<img id="resizeImg" alt="" src="https://img.shields.io/github/stars/deepseek-ai/DeepSeek-V2?style=social" style="vertical-align: middle;">
                 <p>
 		DeepSeek-V2 is a strong MoE model with 23B activated parameters. It achieves stronger 
 		performance compared to DeepSeek 67B, <b>saving 42.5% training costs and boosting generation by up to 5.76x</b>.
@@ -294,7 +345,7 @@
               <br>
 		<a href="pdf/cikm23.pdf" style="vertical-align: middle;">[paper]</a>
 		<a href="https://github.com/ZihanWang314/NOVO" style="vertical-align: middle;">[code]</a>
-		<img alt="" src="https://img.shields.io/github/stars/zihanwang314/NOVO?style=social" style="vertical-align: middle;">
+		<img id="resizeImg" alt="" src="https://img.shields.io/github/stars/zihanwang314/NOVO?style=social" style="vertical-align: middle;">
               <p> 
                 We propose learnable NOVO document-IDs for model-based IR. 
                 NOVO IDs consist of non-overlapping n-gram sets to identify documents,
@@ -323,7 +374,7 @@
               <br>
 		<a href="https://arxiv.org/abs/2306.05212" style="vertical-align: middle;">[paper]</a>
 		<a href="https://github.com/ruc-gsai/yulan-ir" style="vertical-align: middle;">[code]</a>
-		<img alt="" src="https://img.shields.io/github/stars/ruc-gsai/yulan-ir?style=social" style="vertical-align: middle;">
+		<img id="resizeImg" alt="" src="https://img.shields.io/github/stars/ruc-gsai/yulan-ir?style=social" style="vertical-align: middle;">
 		
               <p> 
                 We develop a Retreival-Augmented LLM toolkit for better interaction between LLMs and retrieval systems.
